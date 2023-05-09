@@ -7,7 +7,7 @@
 			"label": "build",
 			"type": "shell",
 			"group": "build",
-			"command": "tsc",
+			"command": "tsc -p ${workspaceFolder}/javascript/tsconfig.json",
 			"options": {
 				"cwd": "${workspaceFolder}/javascript/"
 			},
@@ -15,7 +15,7 @@
 				"base": "$tsc",
 				"fileLocation": [
 					"relative",
-					"${workspaceFolder}/"
+					"${workspaceFolder}/javascript/"
 				]
 			}
 		},
@@ -23,10 +23,7 @@
       "type": "typescript",
       "tsconfig": "tsconfig.json",
       "problemMatcher": ["$tsc"],
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      }
+      "group":"build"
     }
 	]
 }

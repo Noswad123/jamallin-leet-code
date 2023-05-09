@@ -18,9 +18,13 @@ export function mergeSortedArray(nums1: number[], m: number, nums2: number[], n:
 	while(num1Pointer >=0 && num2Pointer >= 0) {
 		// compare current element of nums1 with an current element of the nums2
 		 if(nums2[num2Pointer] > nums1[num1Pointer]) {
-			nums1[mergePointer] = nums2[num2Pointer--];
+			nums1[mergePointer--] = nums2[num2Pointer--];
 		} else {
-			nums1[mergePointer] = nums1[num1Pointer--];
+			nums1[mergePointer--] = nums1[num1Pointer--];
 		}
+	}
+
+	while(num2Pointer>=0) {
+		nums1[mergePointer--] = nums2[num2Pointer--];	
 	}
 }

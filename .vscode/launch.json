@@ -7,21 +7,8 @@
 		{
 			"type": "node",
 			"request": "launch",
-			"name": "findPivot",
-			"skipFiles": [
-				"<node_internals>/**"
-			],
-			"preLaunchTask": "tsc: build - tsconfig.json",
-			"program": "${workspaceFolder}/src/find-pivot-index/find-pivot-index.ts",
-			"outFiles": [
-				"${workspaceFolder}/**/*.js"
-			]
-		},
-		{
-			"type": "node",
-			"request": "launch",
 			"name": "grep test",
-			"args": ["--no-timeouts", "--grep", "${input:mochaGrep}", "./test/**/*spec.js"],
+			"args": ["--no-timeouts", "--grep", "${input:mochaGrep}", "./dist/test/**/*spec.js"],
 			"skipFiles": [
 				"<node_internals>/**"
 			],
