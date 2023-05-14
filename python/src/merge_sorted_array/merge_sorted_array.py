@@ -15,7 +15,7 @@ def merge_sorted_array(nums1, m, nums2, n):
             num1_pointer -= 1 
     
     while num2_pointer >= 0:
-        nums1[merge_pointer] = nums1[num1_pointer]
+        nums1[merge_pointer] = nums2[num2_pointer]
         merge_pointer -= 1
         num2_pointer -= 1
 

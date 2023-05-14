@@ -1,16 +1,23 @@
 import unittest
-import merge_sorted_array
+from merge_sorted_array import merge_sorted_array
 
 class TestMergeSortedArray(unittest.TestCase):
     def test_mergeSortedArray(self):
-        result = merge_sorted_array()
-        expected = []
+        nums1 = [0]
+        m = 0
+        nums2 = [1]
+        n = 1
+        result = merge_sorted_array(nums1, m, nums2, n)
+        expected = [1]
+        self.assertEqual(result, expected)
+    def test_mergeSortedArray(self):
+        nums1 = [4,5,6,0,0,0]
+        m = 3
+        nums2 = [1,2,3]
+        n = 3
+        result = merge_sorted_array(nums1, m, nums2, n)
+        expected = [1,2,3,4,5,6]
         self.assertEqual(result, expected) 
-
-"""
-python -m unittest test_calc.py
-"""
-
 
 if __name__ == '__main__':
     unittest.main()
