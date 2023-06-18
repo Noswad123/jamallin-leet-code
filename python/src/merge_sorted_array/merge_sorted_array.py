@@ -1,4 +1,3 @@
-
 def merge_sorted_array(nums1, m, nums2, n):
     merge_pointer = m + n - 1
     num1_pointer = m - 1

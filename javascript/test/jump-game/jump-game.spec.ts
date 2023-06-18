@@ -1,5 +1,5 @@
 import {assert} from 'chai';
-import { canJump } from '../../src/jump-game/jump-game';
+import { canJump, canJump2 } from '../../src/jump-game/jump-game';
 
 describe(canJump.name, function() {
 	[
@@ -22,4 +22,18 @@ describe(canJump.name, function() {
 			assert.isFalse(result);
 		});
 	})
+});
+
+
+describe(canJump2.name, function() {
+	[
+		{arr: [1,2,1,1, 1], expected: 3},
+		// {arr: [1,1,1,1], expected: 3}
+	].forEach(({arr, expected}) => {
+		it(`should determine can reach end ${JSON.stringify(arr)}`, function() {
+			const result = canJump2(arr);
+			assert.strictEqual(result, expected);
+		});
+	});
+
 });

@@ -27,16 +27,16 @@ export function removeDuplicates2(nums: number[]): number {
     };
 	while(i < nums.length) {
 		if(nums[i] === prevValue) {
-            if(prevValue === dupe.value){
-                dupe.count++;
-                if(dupe.count > 2) {
-			        nums.splice(i, 1);
-			        continue;
-                }
-            } else {
-                dupe.count = 2;
-                dupe.value = prevValue;
-            }
+			if(prevValue === dupe.value){
+					dupe.count++;
+					if(dupe.count > 2) {
+				nums.splice(i, 1);
+				continue;
+					}
+			} else {
+					dupe.count = 2;
+					dupe.value = prevValue;
+			}
 		}
 		prevValue = nums[i];
 		i++;

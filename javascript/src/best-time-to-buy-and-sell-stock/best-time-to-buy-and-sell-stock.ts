@@ -23,7 +23,7 @@ export function maxProfit2(prices: number[]): number {
 			const profit = prices[daySold] - prices[dayBought];
 			profits += profit;
 		}
-			dayBought = daySold;
+		dayBought = daySold;
 		daySold++;
 	}
  return profits;
