@@ -1,14 +1,16 @@
 #!/bin/bash
 
-project_directory =$(dirname "$(realpath)")
+project_directory=$(realpath)
 python_src="${project_directory}/src/python/src/"
 javascript_src="${project_directory}/src/javascript/src/"
 
+echo $python_src
+echo $javascript_src
 # Create missing folders/files in javascript/src
 find "$python_src" -type d | while IFS= read -r dir; do
     # Convert directory name from underscores to hyphens
     js_dir="${dir/$python_src/$javascript_src}"
-    js_dir="${js_dir//_/}"
+    js_dir="${js_dir//_/-}"
 
     # Create directory if it doesn't exist
     if [[ ! -d "$js_dir" ]]; then
